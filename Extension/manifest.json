@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome Extension",
+    "description": "",
+    "version": "0.0.1",
+    "content_scripts": [
+        {
+            "matches": ["https://www.mentorgoal.com/"],
+            "css": ["main.css"],
+            "js": ["background.js"]
+        }
+    ],
+    
+    "icons": {
+        "16": "/images/icon.png",
+        "32": "/images/icon.png",
+        "48": "/images/icon.png",
+        "128": "/images/icon.png"
+    },
+    
+    "action": {
+        "default_popup": "page1.html",
+        "default_icon": {
+            "16": "/images/icon.png",
+            "32": "/images/icon.png",
+            "48": "/images/icon.png",
+            "128": "/images/icon.png"
+        }
+    },
+    "options_page": "options.html",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://www.google.com/*",
+        "https://www.mentorgoal.com/*"
+    ]
+}
